@@ -7,7 +7,6 @@ class Exercise{
 		
 		Chapter3Class C3 = new Chapter3Class();
 		
-		
 	}
 	
 }
