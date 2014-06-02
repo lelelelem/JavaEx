@@ -11,6 +11,8 @@ public class Chapter3Class {
 		//counter to count spaces
 		int SpaceCounter= 0;
 		
+		System.out.println("Write down anything, input a '.' to end.....");
+		
 		//used for's iterator for System.in,read to update c
 		//c is initialised to a simply because we only care about '.' and spaces
 		for(char c='a';c!='.';c = (char)System.in.read()){
