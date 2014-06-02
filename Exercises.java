@@ -8,6 +8,7 @@ class Exercise{
 	public static void main(String args[]){
 		Chapter2Class C2 = new Chapter2Class();
 		
+		C2.FindPrimeNumbers();
 	}
 	
 }
