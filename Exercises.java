@@ -7,7 +7,10 @@ import java.util.*;
 class Exercise{	
 	
 	public static void main(String args[]){
-	
+		
+		Chapter1Class C1 = new Chapter1Class();
+		C1.Converter_ft_to_inch();
+		
 	}
 	
 	
