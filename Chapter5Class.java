@@ -23,7 +23,8 @@ public class Chapter5Class {
 				//since iterator field in for doesnt run the first time
 				min = max = numArray[0];				
 			}
-			
+			//not including zero since we have no input yet and also 
+			//numArray[0-1] will result an arrayoutofboundsexception
 			else if(x!=0){
 				//why numArray[x-1]? because getting input is late by one 
 				//since iterator field in for doesnt run the first time
