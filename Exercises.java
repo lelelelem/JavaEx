@@ -2,9 +2,6 @@
 import java.io.IOException;
 import java.util.*;
 
-
-
-
 class Exercise{	
 	
 	public static void main(String args[]) throws IOException{
@@ -21,11 +18,10 @@ class Exercise{
 			}
 			catch (Exception e) {
 					System.out.println("Some Error Happened Try again");
-					in.next();
+					in.next();//added to consume wrong input
 			}
 			
 		}
-		
 		System.out.println("Bye");
 		
 	}
