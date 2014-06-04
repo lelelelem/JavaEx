@@ -1,6 +1,7 @@
 
 class Chapter12Class extends Thread {
 
+	private int Del=0;
 	
 	Chapter12Class(){
 		start();
@@ -23,6 +24,13 @@ class Chapter12Class extends Thread {
 	
 	public void run(){
 			
+		MainStopLight();
+	
+	}
+	
+	private void MainStopLight(){
+			
+		
 		StopLight SL[] = StopLight.values();
 		int i=0;
 		
@@ -31,16 +39,18 @@ class Chapter12Class extends Thread {
 				i = i%3;
 					System.out.println("|"+SL[i]+"|");
 				try {
+					Del = SL[i].getDelay();
 					Thread.sleep(SL[i].getDelay());
+					
 				} catch (InterruptedException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				}
-			
 				
+				}
 					System.out.println("====");
 			i++;
 		}
+		
 	}
+	
+	
 		
 }
