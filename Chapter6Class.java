@@ -2,6 +2,7 @@
 
 
 import java.io.IOException;
+import java.util.*;
 
 public class Chapter6Class {
 
@@ -9,6 +10,8 @@ public class Chapter6Class {
 		private int currSize=0;
 		
 		private char charStack[];
+		
+		Scanner in = new Scanner(System.in);
 		
 		Chapter6Class(int size){
 			
@@ -20,29 +23,59 @@ public class Chapter6Class {
 		
 		void push() throws IOException{
 
-			if (currSize==maxSize){
-				System.out.println("Cant push anymore pop values to be able to push again"); 
-				//used so that an additional else wont be needed 
-				return;	
+			try {
+				System.out.println("Input Char to push:");
+				charStack[currSize++] = (char)System.in.read();
+				System.out.println("Current Stack size now "+currSize);
+			} 
+			catch (Exception e) {
+				System.out.print("Cant Push Anymore");
+				currSize=0;
+			}
+			finally{
+				return;
 			}
 			
-			System.out.println("Input Char to push:");
-			charStack[currSize++] = (char)System.in.read();
-			System.out.println("Current Stack size now "+currSize);
 		}
 		
 		void pop(){
-			if (currSize==-1){
-				System.out.println("Cant pop anymore push values to be able to pop again"); 
-				//used so that an additional else wont be needed 
-				return;	
+			try {
+				System.out.println("Character popped is "+ charStack[--currSize]);
+				System.out.println("Current Stack size now "+currSize);
+			} catch (Exception e) {
+				System.out.print("No values to pop anymore");
+				currSize=0;
 			}
-			//used in order to prevent an outofboundsexception
-			//since if currsize is 0-1 then it will be negative 1
-			currSize = currSize==0 ? 0:currSize-1;
+			finally{
+				return;
+			}
+		}
+		
+		void Menu(Chapter6Class c6) throws IOException{
+			int ChooseOption =0;
 			
-			System.out.println("Character popped is "+ charStack[currSize]);
-			System.out.println("Current Stack size now "+currSize);
+			try {
+				while(ChooseOption!=3){
+					System.out.println("\nChoose action: \n1)push\n2)pop\n3)exit\n");
+						
+						ChooseOption = in.nextInt();
+						
+						System.out.println("\n");
+						
+						if (ChooseOption==1){
+							c6.push();
+						}
+						
+						else if (ChooseOption==2){
+							c6.pop();
+						}
+				}
+			} catch (Exception e) {
+				System.out.print("Some Error Happened Try Again");
+				in.next(); //added to consume wrong input
+				Menu(c6);				
+			}
+			
 			
 		}
 		
