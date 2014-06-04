@@ -1,17 +1,11 @@
 
 import java.util.*;
 
-class Exercise extends Chapter12Class {	
+class Exercise {	
 	
-	public static void main(String args[]) {
+	public static void main(String args[]) throws InterruptedException {
 	
-		
-		
-		for(Phones i:Phones.values()){
-			System.out.print(i.getPrice()+",");
-			
-		}
-		
+		Chapter12Class c12R = new Chapter12Class();
 		
 		
 	}
