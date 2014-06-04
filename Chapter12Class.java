@@ -24,20 +24,22 @@ class Chapter12Class extends Thread {
 	public void run(){
 			
 		StopLight SL[] = StopLight.values();
+		int i=0;
 		
 		while(true){			
-			for (int i=0;i<3;i++){
 			
-				System.out.println(SL[i]);
+				i = i%3;
+					System.out.println("|"+SL[i]+"|");
 				try {
 					Thread.sleep(SL[i].getDelay());
 				} catch (InterruptedException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
+			
 				
-			}
-			System.out.println("++++++++++++++++++++++");
+					System.out.println("====");
+			i++;
 		}
 	}
 		
