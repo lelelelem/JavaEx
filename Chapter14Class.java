@@ -7,9 +7,9 @@ public class Chapter14Class extends LinkedList {
 	
 	int len;
 	
-	
 	Chapter14Class(){
 		head = null;
+		len=0;
 	}
 	
 	void addhead(int PrevX, int PrevY,int x, int y){
@@ -22,7 +22,9 @@ public class Chapter14Class extends LinkedList {
 		head.y = y;
 		head.PrevX = PrevX;
 		head.PrevY = PrevY;
+		
 		len++;
+		
 	}
 	
 	Line2D[] traverse(){
@@ -31,8 +33,10 @@ public class Chapter14Class extends LinkedList {
 		
 		Line2D.Double lines[] = new Line2D.Double[len];
 		
-		for(LinkedList temp = head; temp!=null;temp = temp.next){		
+		for(LinkedList temp = head; temp!=null;temp = temp.next){
+			
 			lines[ctr++] = new Line2D.Double(temp.PrevX, temp.PrevY, temp.x, temp.y);
+			
 		}		
 		return lines;
 	}
