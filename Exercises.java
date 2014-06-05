@@ -13,36 +13,22 @@ public class Exercises extends Applet implements MouseInputListener{
 	private int x=0,y=0, PrevX=0, PrevY=0;
 	Chapter14Class c14= new Chapter14Class();
 	
-	public void init(){
-		
+	public void init(){		
 		addMouseListener(this);
-		addMouseMotionListener(this);
-	
+		addMouseMotionListener(this);	
 	}
 	
 	public void start(){
-	
-		
-		
 	}
-	
-	
-	public void paint(Graphics g){
 		
-		Line2D lines[] = c14.traverse(); 
-		
-		Graphics2D g2d = (Graphics2D)g;
-		
-		super.paintComponents(g2d);
-		
-		//Line2D.Double line = new Line2D.Double(PrevX, PrevY, x, y);
-		
-		for(Line2D DrawLines:lines){
-			
+	public void paint(Graphics g){		
+		Line2D lines[] = c14.traverse(); 		
+		Graphics2D g2d = (Graphics2D)g;		
+		super.paintComponents(g2d);		
+		//Line2D.Double line = new Line2D.Double(PrevX, PrevY, x, y);		
+		for(Line2D DrawLines:lines){			
 			g2d.draw(DrawLines);
-		}
-		
-		
+		}	
 	}
 	
 	public void stop(){
@@ -54,7 +40,6 @@ public class Exercises extends Applet implements MouseInputListener{
 		
 		
 	}
-
 
 	@Override
 	public void mousePressed(java.awt.event.MouseEvent e) {
@@ -72,10 +57,8 @@ public class Exercises extends Applet implements MouseInputListener{
 		
 		repaint();
 	}
-
 	@Override
 	public void mouseDragged(java.awt.event.MouseEvent arg0) {
-		
 	}
 
 	@Override
@@ -83,7 +66,6 @@ public class Exercises extends Applet implements MouseInputListener{
 		// TODO Auto-generated method stub
 		
 	}
-
 
 	@Override
 	public void mouseClicked(java.awt.event.MouseEvent e) {

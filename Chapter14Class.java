@@ -2,9 +2,9 @@ import java.awt.*;
 import java.awt.geom.Line2D;
 
 
-public class Chapter14Class {
+public class Chapter14Class extends LinkedList {
 
-	LinkedList head;
+	
 	int len;
 	
 	
@@ -40,9 +40,4 @@ public class Chapter14Class {
 }
 
 
-class LinkedList{
-	
-	LinkedList head,next;
-	int x, y, PrevX, PrevY;
-	
-}
+
